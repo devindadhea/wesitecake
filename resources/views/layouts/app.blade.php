@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     @stack('styles')
     <style>
         @keyframes float3d {
@@ -38,7 +39,7 @@
         <div class="max-w-7xl mx-auto px-4 md:px-6 py-4 flex justify-between items-center">
             <!-- Logo -->
             <a href="{{ route('home') }}">
-                <h1 class="text-2xl md:text-3xl font-extrabold text-[#C2185B] tracking-tight">Pita<span class="text-[#F8BBD9]">Bolu</span></h1>
+                <h1 class="text-2xl md:text-3xl font-extrabold text-[#C2185B] tracking-tight">Herlina<span class="text-[#F8BBD9]"> Cookies & Cakes</span></h1>
             </a>
 
             <!-- Desktop Menu -->
@@ -141,7 +142,7 @@
     <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
         <!-- Brand -->
         <div>
-            <h3 class="text-2xl font-extrabold text-white">Pita<span class="text-[#F48FB1]">Bolu</span></h3>
+            <h3 class="text-2xl font-extrabold text-white">Herlina <span class="text-[#F48FB1]"> Cookies & Cakes</span></h3>
             <p class="mt-4 text-gray-400">
                 {{ $footer->description ?? 'Roti fresh setiap hari, dibuat dari bahan berkualitas dan rasa terbaik untuk keluarga.' }}
             </p>
@@ -221,7 +222,7 @@
     </div>
 
     <p class="text-center text-gray-400 mt-12 border-t border-gray-700 pt-6 text-sm">
-        {{ $footer->copyright ?? '© 2025 PitaBolu. All Rights Reserved.' }}
+        {{ $footer->copyright ?? '© 2026 Herlina Cookies & Cake. All Rights Reserved.' }}
     </p>
 </footer>
 </body>
