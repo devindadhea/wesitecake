@@ -12,9 +12,8 @@
         <div class="bg-white rounded-2xl shadow-xl p-8 border border-pink-200/40">
             <div class="text-center mb-8">
                 <a href="{{ route('home') }}">
-                    <h1 class="text-3xl font-extrabold text-[#C2185B]">Herlina <br><span class="text-[#F8BBD9]">Cookies & Cakes</span></h1>
+                    <h1 class="text-3xl font-extrabold text-[#C2185B]">Login <span class="text-[#F8BBD9]">Admin</span></h1>
                 </a>
-                <p class="text-gray-600 mt-2">Login Admin</p>
                 
             </div>
             <!-- Di dalam form login, setelah tombol login -->
