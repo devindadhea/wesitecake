@@ -135,39 +135,54 @@
         </div>
     </div>
 
-    <!-- MODAL DETAIL PRODUK -->
-    <div id="productModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-black/60 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="modalName">
-        <div class="bg-white max-w-3xl w-full max-h-[92vh] overflow-y-auto shadow-2xl relative rounded-3xl overflow-hidden" onclick="event.stopPropagation()">
-            <button onclick="closeProductModal()" 
-                    class="absolute top-3 right-3 z-10 w-10 h-10 flex items-center justify-center bg-white/95 text-gray-700 hover:bg-[#C2185B] hover:text-white transition-colors duration-300 shadow-md rounded-full"
-                    aria-label="Tutup detail produk">
-                <i class="bi bi-x-lg"></i>
-            </button>
-            <div class="grid md:grid-cols-2">
-                <div class="bg-[#FFF5F7] aspect-square md:aspect-auto md:min-h-[380px] flex items-center justify-center p-4 md:p-6 rounded-t-3xl md:rounded-l-3xl md:rounded-tr-none">
-                    <img id="modalImage" src="" alt="" class="w-full h-full object-contain drop-shadow-lg rounded-2xl">
+  <!-- MODAL DETAIL PRODUK -->
+<div id="productModal" class="fixed inset-0 z-[100] hidden items-end sm:items-center justify-center p-0 sm:p-4 bg-black/60 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="modalName">
+    <div class="bg-white w-full sm:max-w-3xl max-h-[92vh] sm:max-h-[90vh] overflow-y-auto shadow-2xl relative rounded-t-3xl sm:rounded-3xl" onclick="event.stopPropagation()">
+        
+        <!-- Handle bar (khusus HP) -->
+        <div class="sm:hidden sticky top-0 z-20 bg-white pt-3 pb-2 flex justify-center rounded-t-3xl">
+            <span class="w-10 h-1.5 bg-gray-300 rounded-full"></span>
+        </div>
+
+        <!-- Tombol close -->
+        <button onclick="closeProductModal()" 
+                class="absolute top-3 right-3 z-30 w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center bg-white/95 text-gray-700 hover:bg-[#C2185B] hover:text-white transition-colors duration-300 shadow-md rounded-full"
+                aria-label="Tutup detail produk">
+            <i class="bi bi-x-lg text-sm sm:text-base"></i>
+        </button>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2">
+            <!-- Gambar -->
+            <div class="bg-[#FFF5F7] h-56 sm:h-auto sm:min-h-[380px] flex items-center justify-center p-4 sm:p-6">
+                <img id="modalImage" src="" alt="" class="w-full h-full object-contain drop-shadow-lg rounded-2xl">
+            </div>
+
+            <!-- Info -->
+            <div class="p-5 sm:p-8 flex flex-col">
+                <span class="inline-block text-[10px] sm:text-[11px] font-semibold tracking-[0.25em] text-[#C2185B]/70 uppercase mb-2">Detail Produk</span>
+                <h3 id="modalName" class="text-lg sm:text-3xl font-extrabold text-[#C2185B] tracking-tight leading-tight pr-8"></h3>
+                
+                <div class="flex items-center mt-2">
+                    <span id="modalRating" class="text-yellow-500 text-sm sm:text-base tracking-tight"></span>
+                    <span id="modalRatingValue" class="text-xs sm:text-sm text-gray-500 ml-2"></span>
                 </div>
-                <div class="p-5 md:p-8 flex flex-col">
-                    <span class="inline-block text-[11px] font-semibold tracking-[0.25em] text-[#C2185B]/70 uppercase mb-2">Detail Produk</span>
-                    <h3 id="modalName" class="text-xl md:text-3xl font-extrabold text-[#C2185B] tracking-tight leading-tight"></h3>
-                    <div class="flex items-center mt-2">
-                        <span id="modalRating" class="text-yellow-500 text-base tracking-tight"></span>
-                        <span id="modalRatingValue" class="text-sm text-gray-500 ml-2"></span>
-                    </div>
-                    <p id="modalDescription" class="mt-4 text-gray-600 leading-relaxed text-sm md:text-base"></p>
-                    <div class="mt-auto pt-5">
-                        <p class="text-xs uppercase tracking-wider text-gray-500 font-semibold mb-1">Harga</p>
-                        <p id="modalPrice" class="text-2xl md:text-3xl font-extrabold text-[#C2185B] tracking-tight"></p>
-                    </div>
-                    <a id="modalWhatsapp" href="#" target="_blank"
-                       class="mt-4 inline-flex items-center justify-center gap-2 w-full bg-[#C2185B] hover:bg-[#a0154a] text-white font-semibold py-3.5 px-4 transition-colors duration-300 rounded-full shadow-md">
-                        <i class="bi bi-whatsapp text-lg"></i>
-                        Pesan via WhatsApp
-                    </a>
+
+                <p id="modalDescription" class="mt-3 sm:mt-4 text-gray-600 leading-relaxed text-sm sm:text-base"></p>
+
+                <div class="mt-auto pt-4 sm:pt-5">
+                    <p class="text-[10px] sm:text-xs uppercase tracking-wider text-gray-500 font-semibold mb-1">Harga</p>
+                    <p id="modalPrice" class="text-xl sm:text-3xl font-extrabold text-[#C2185B] tracking-tight"></p>
                 </div>
+
+                <a id="modalWhatsapp" href="#" target="_blank" rel="noopener"
+                   class="mt-4 inline-flex items-center justify-center gap-2 w-full bg-[#C2185B] hover:bg-[#a0154a] text-white font-semibold py-3.5 px-4 transition-colors duration-300 rounded-full shadow-md text-sm sm:text-base">
+                    <i class="bi bi-whatsapp text-lg"></i>
+                    Pesan via WhatsApp
+                </a>
             </div>
         </div>
     </div>
+</div>
 </section>
 
 <!-- ABOUT SECTION -->
